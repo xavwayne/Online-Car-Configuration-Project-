@@ -1,0 +1,68 @@
+==============================
+1.Upload Properties file
+2.Configure a car
+1
+Please provide a file:  
+Ford.txt
+Ford.txt loading...
+Ford.txt loaded
+Ford.txt sent
+Srever: Car Model Ford Focus Created Successfully!
+==============================
+1.Upload Properties file
+2.Configure a car
+2
+	Ford Focus
+Which model would you like to choose?
+Ford Focus
+Ford Focus	10000.0
+Transmission	Manual,0.0	Automatic,100.0
+Brakes	Regular,0.0	ABS,100.0
+Set your configuration with format "OptionSet:Optoin". Type 'q' to finish configuration.
+Transmission:Automatic
+Set your configuration with format "OptionSet:Optoin". Type 'q' to finish configuration.
+q
+Configuration done!
+Ford Focus
+Automatic 100.0
+Total price: 10100.0
+==============================
+1.Upload Properties file
+2.Configure a car
+1
+Please provide a file:  
+Toyota.properties
+Toyota.properties loading...
+Toyota.properties loaded
+Toyota.properties sent
+Srever: Car Model Toyota Prius Created Successfully!
+==============================
+1.Upload Properties file
+2.Configure a car
+2
+	Ford Focus	Toyota Prius
+Which model would you like to choose?
+Ford Focus
+Ford Focus	10000.0
+Transmission	Manual,0.0	Automatic,100.0
+Brakes	Regular,0.0	ABS,100.0
+Set your configuration with format "OptionSet:Optoin". Type 'q' to finish configuration.
+q
+Configuration done!
+Ford Focus
+Total price: 10000.0
+==============================
+1.Upload Properties file
+2.Configure a car
+2
+	Ford Focus	Toyota Prius
+Which model would you like to choose?
+Toyota Prius
+Toyota Prius	0.0
+Transmission	Manual,0.0	Automatic,0.0
+Brakes	Regular,0.0	ABS,0.0
+Set your configuration with format "OptionSet:Optoin". Type 'q' to finish configuration.
+q
+Configuration done!
+Toyota Prius
+Total price: 0.0

@@ -1,0 +1,72 @@
+Create database car...
+
+SELECT * FROM automobile
+1, Focus Wagon ZTW, 10000
+
+SELECT * FROM optionset
+1, Color, 1
+2, Transmission, 1
+3, Brakes/Traction Control, 1
+4, Side Impact Air Bags, 1
+5, Power Moonroof, 1
+
+SELECT * FROM options
+1, Fort Knox Gold Clearcoat Metallic, 0, 1
+2, Liquid Grey Clearcoat Metallic, 0, 1
+3, Infra-Red Clearcoat, 0, 1
+4, Grabber Green Clearcoat Metallic, 0, 1
+5, Sangria Red Clearcoat Metallic, 0, 1
+6, French Blue Clearcoat Metallic, 0, 1
+7, Twilight Blue Clearcoat Metallic, 0, 1
+8, CD Silver Clearcoat Metallic, 0, 1
+9, Pitch Black Clearcoat, 0, 1
+10, Cloud 9 White Clearcoat, 0, 1
+11, automatic, 0, 2
+12, manual, -815, 2
+13, Standard, 0, 3
+14, ABS, 400, 3
+15, ABS with Advance Trac, 1625, 3
+16, present, 350, 4
+17, not present, 0, 4
+18, present, 595, 5
+19, not present, 0, 5
+
+update car.optionset set optsetname='Vision' where optsetname='Color' and AutoID=1;
+
+SELECT * FROM optionset
+1, Vision, 1
+2, Transmission, 1
+3, Brakes/Traction Control, 1
+4, Side Impact Air Bags, 1
+5, Power Moonroof, 1
+
+update car.options set optprice='100.0' where optsetID=2 and optname='manual';
+
+SELECT * FROM options
+1, Fort Knox Gold Clearcoat Metallic, 0, 1
+2, Liquid Grey Clearcoat Metallic, 0, 1
+3, Infra-Red Clearcoat, 0, 1
+4, Grabber Green Clearcoat Metallic, 0, 1
+5, Sangria Red Clearcoat Metallic, 0, 1
+6, French Blue Clearcoat Metallic, 0, 1
+7, Twilight Blue Clearcoat Metallic, 0, 1
+8, CD Silver Clearcoat Metallic, 0, 1
+9, Pitch Black Clearcoat, 0, 1
+10, Cloud 9 White Clearcoat, 0, 1
+11, automatic, 0, 2
+12, manual, 100, 2
+13, Standard, 0, 3
+14, ABS, 400, 3
+15, ABS with Advance Trac, 1625, 3
+16, present, 350, 4
+17, not present, 0, 4
+18, present, 595, 5
+19, not present, 0, 5
+
+delete from car.automobile where autoname='Focus Wagon ZTW';
+
+SELECT * FROM automobile
+
+SELECT * FROM optionset
+
+SELECT * FROM options

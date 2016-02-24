@@ -1,0 +1,16 @@
+CreateSCH=CREATE SCHEMA `car` ;
+CreateTab_automobile=CREATE TABLE `car`.`automobile` (`AutoID` INT NOT NULL, `autoname` VARCHAR(45) NULL, `baseprice` FLOAT NULL, PRIMARY KEY (`AutoID`));
+CreateTab_optset=CREATE TABLE `car`.`optionset` (  `optsetID` INT NOT NULL,  `optsetname` VARCHAR(45) NULL,  `AutoID` INT NULL,  PRIMARY KEY (`optsetID`),  INDEX `AutoID_idx` (`AutoID` ASC),  CONSTRAINT `AutoID`    FOREIGN KEY (`AutoID`)    REFERENCES `car`.`automobile` (`AutoID`)    ON DELETE CASCADE    ON UPDATE CASCADE);
+CreateTab_opt=CREATE TABLE `car`.`options` (  `optID` INT NOT NULL,  `optname` VARCHAR(45) NULL,  `optprice` FLOAT NULL,  `optsetID` INT NULL,  PRIMARY KEY (`optID`),  INDEX `optsetID_idx` (`optsetID` ASC),  CONSTRAINT `optsetID`    FOREIGN KEY (`optsetID`)    REFERENCES `car`.`optionset` (`optsetID`)    ON DELETE CASCADE    ON UPDATE CASCADE);
+Insert_to_automobile=INSERT INTO `car`.`automobile` (`AutoID`, `autoname`, `baseprice`) VALUES ('%id', '%name', '%price');
+Insert_to_optset=INSERT INTO `car`.`optionset` (`optsetID`, `optsetname`, `AutoID`) VALUES ('%id', '%name', '%autoid');
+Insert_to_opt=INSERT INTO `car`.`options` (`optID`, `optname`, `optprice`, `optsetID`) VALUES ('%id', '%name', '%price', '%optsetid');
+Del_auto=delete from car.automobile where autoname='%autoname';
+Select_all=SELECT * FROM 
+Select_autoid=SELECT AutoID FROM car.automobile where autoname='%autoname';
+Update_optsetname=update car.optionset set optsetname='%newname' where optsetname='%oldname' and AutoID=%autoid;
+Select_optsetid=select optsetID from car.optionset where AutoID=%autoid and optsetname='%optsetname';
+Update_optprice=update car.options set optprice='%newprice' where optsetID=%optsetid and optname='%optname';
+Select_max_autoid=select max(AutoID) from car.automobile;
+Select_max_optsetid=select max(optsetID) from car.optionset;
+Select_max_optid=select max(optID) from car.options;

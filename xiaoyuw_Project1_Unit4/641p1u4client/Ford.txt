@@ -1,0 +1,13 @@
+CarModel=Focus
+CarMake=Ford
+BasePrice=10000
+OptionSet1=Transmission
+Option1a=Manual
+Option1aPrice=0
+Option1b=Automatic
+Option1bPrice=100
+OptionSet2=Brakes
+Option2a=Regular
+Option2aPrice=0
+Option2b=ABS
+Option2bPrice=100
